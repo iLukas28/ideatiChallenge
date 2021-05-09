@@ -25,8 +25,16 @@ class JokeAPI {
               '.svg');
     } catch (e) {
       Get.dialog(AlertDialog(
-        title: Text(e.toString()),
-        actions: [TextButton(onPressed: Get.back, child: Text('Aceptar'))],
+        title: Text('Espera'),
+        content: Text('Por favor, revisa tu conexión de internet.'),
+        actions: [
+          TextButton(
+              onPressed: Get.back,
+              child: Text(
+                'Aceptar',
+                style: TextStyle(color: Colors.green),
+              ))
+        ],
       ));
       return null;
     }

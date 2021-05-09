@@ -1,10 +1,11 @@
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:ideati_ilukas/api/joke_api.dart';
+import 'package:ideati_ilukas/models/joke.dart';
 
 class HomeController extends GetxController {
   bool _loading = false;
 
-  List<dynamic> _jokes = [];
+  List<Joke> _jokes = [];
 
   List<dynamic> get jokes => _jokes;
 
@@ -14,7 +15,7 @@ class HomeController extends GetxController {
     _loading = true;
     update(['loading']);
     final data = await JokeAPI.instance.getJoke();
-    _jokes.add(data);
+    if (data != null) _jokes.add(data);
     sortJokeByLikes();
     _loading = false;
     update(['joke', 'loading']);
