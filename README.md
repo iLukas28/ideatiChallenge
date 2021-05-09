@@ -1,16 +1,14 @@
 # ideati_ilukas
 
-A new Flutter project.
+A new Flutter project. 
+
+This project is a widget for interacting with a list of graphical interface elements, using GetX.
+
+The widget consist in a ListView with several items. Each item should have a circle avatar and a joke from https://icanhazdadjoke.com. Then, it collect likes from a button. The list should present itself sorted by the number of likes. The last item has a button with a plus sign to obtain a new joke.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+For compile this project, first run "flutter pub get" in your console and then "flutter run".
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
